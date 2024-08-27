@@ -1,0 +1,23 @@
+name: Keep Gitpod Alive
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Create an empty commit
+        run: |
+          git config --global user.email "novauragency@gmail.com"
+          git config --global user.name "GitHub Action"
+          git commit --allow-empty -m "Keep Gitpod alive"
+
+      - name: Push changes
+        run: |
+          git push
+          
