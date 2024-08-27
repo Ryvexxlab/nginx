@@ -3,8 +3,7 @@ image:
 
 tasks:
   - init: |
-      sudo apt-get update
-      sudo apt-get install -y <software-required>
+      sudo apt-get update -y && sudo apt-get upgrade -y
     command: |
       echo "Environment set up!"
 
