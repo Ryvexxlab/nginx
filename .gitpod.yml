@@ -1,0 +1,14 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: |
+      sudo apt-get update
+      sudo apt-get install -y <software-required>
+    command: |
+      echo "Environment set up!"
+
+ports:
+  - port: 80
+    onOpen: open-preview
+    
