@@ -11,7 +11,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 
 RUN service nginx start
 
-COPY keep_alive.sh /workspace/keep_alive.sh
+COPY keep_alive.sh /workspace
 
 RUN sudo chmod +x /workspace/keep_alive.sh
 
