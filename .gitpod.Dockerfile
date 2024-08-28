@@ -6,9 +6,9 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
     sudo \
     vim \
     nano \
+    nginx \
     docker.io
 
-RUN apt-get install nginx - y
 RUN service nginx start
 
 
